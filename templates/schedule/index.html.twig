@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Railway
+{% endblock %}
+
+{% block body %}
+	<div class="card card-body bg-light"><h1>Railway Serbia</h1></div>
+	
+	{{ form_start(form) }}
+
+	{{ form_end(form) }}
+	
+	{% block form_row %}
+	<div class="form-group">
+		<div class="row">
+			<div class="col-12">	
+				<a id = "time_table_search" class = "btn btn-primary float-right" href = "#" >Search</a>
+			</div>	
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="row">
+			<div class="col-12">
+				<table class = "table table-bordered">  
+				<tbody id = "schedule"></tbody></table>   
+			</div>
+		</div>
+	</div>
+	{% endblock %}
+
+{% endblock %}
+
+{% block javascripts %}
+<script language = "javascript">
+	$(document).ready(function(){
+		
+		$("#time_table_search").on("click", function(event){
+						$.ajax({  
+				url:	'http://localhost/railway/public/index.php/service/test',  
+				type:	'POST',   
+				data: 	{ CityStart: document.getElementById('time_table_cityStart').value, CityEnd: document.getElementById('time_table_cityEnd').value },
+				dataType:	'json',  
+				async:	true,  
+				success: function(data, status) {
+					if(data.length == 0){ 
+						$('#schedule').html('');  
+						var e = $('<tr><td>There is no line.</td></tr>');			 
+						$('#schedule').append(e); 
+					}
+					else{
+						$('#schedule').html('');						
+						var e = $('<tr><th></th><th colspan="2">From</th><th colspan="2">To</th></tr>');  
+						$('#schedule').append(e); 
+						for(i = 0; i < data.length; i++) {  
+							schedule = data[i];	
+							for(j = 0; j < schedule.length; j++) { 						
+								var e = $('<tr><td id = "number"></td><td id = "cityStart"></td><td id = "timeStart"></td><td id = "cityEnd"></td><td id = "timeEnd"></td></tr>');			 
+								$('#number', e).html(j+1);
+								$('#cityStart', e).html(schedule[j]['cityStart']);  
+								$('#timeStart', e).html(schedule[j]['timeStart']); 
+								$('#cityEnd', e).html(schedule[j]['cityEnd']);  
+								$('#timeEnd', e).html(schedule[j]['timeEnd']);	
+								$('#schedule').append(e); 
+							}								
+						}  
+					}
+				},  
+				error : function(xhr, textStatus, errorThrown) {  
+					alert('Problem'); 
+				} 
+			});
+		});
+	}); 
+</script>
+{% endblock %}
