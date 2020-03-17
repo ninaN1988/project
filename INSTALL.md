@@ -121,15 +121,25 @@ So finally, this is list of important files in our symfony web-site skeleton pro
 GitHub:
 1. Create user in https://github.com/
 2. Create repository in github
+
 3. Download git https://git-scm.com/download/win
+
 4. Open Git Bash from Windows Start menu and use commands in this order:
+
 cd /d/wamp2/www/railway
+
 git init
+
 git add README.md
+
 git config --global user.email yourgithumailregistration
+
 git config --global user.name youusernamefromgithubregistration
+
 git commit -m "first commit"
+
 git remote add origin remote https://github.com/ninaN1988/project.git
+
 git push origin master --force
 
 
