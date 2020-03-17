@@ -1,5 +1,5 @@
-We use Symfony as framework. Symfony project is created by using composer and has web-site skeleton. 
-Responsive design makes Bootstrap class (container, row, btn btn-primary float-right, form-group, card card-body bg-light, table table-bordered, etc., bootstrap class container for block body in base.html.twig).
+We use Symfony 5. as framework, PHP 7.3, MariaDB 10.4. Symfony project is created by using composer and has web-site skeleton. 
+Responsive design makes Bootstrap 4 class (container, row, btn btn-primary float-right, form-group, card card-body bg-light, table table-bordered, etc., bootstrap class container for block body in base.html.twig).
 
 'base.html.twig' (templates folder) file includes all links and scripts for JQuery, Bootstrap and Bootstrap select, and bootrstap class container for div block body:
 
