@@ -13,22 +13,10 @@ Installation:
 
 2.	Download Composer and install it globally on computer (https://getcomposer.org/download/)
 
-3.	GitHub
-
-- Create user https://github.com/
-- Download git and install it https://git-scm.com/download/win
-
-4. Open Git Bash from Windows Start menu and use commands in this order:
-
-cd /c/wamp/www/
-
-git clone https://github.com/ninaN1988/project
-
-cd /c/wamp/www/project
-
-php -S localhost:3306 -t public/
-
-
+3.	Download project from repository and unzip to c:\wamp\www\Railway\
+ (c:\wamp\www\Railway\public\index.php)
+ 
+4. Open in Browser http://localhost/railway/public/index.php
 
 
 
