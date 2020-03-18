@@ -22,13 +22,9 @@ Installation:
 
 cd /c/wamp/www/
 
-mkdir railway
-
-cd /c/wamp/www/railway/
-
 git clone https://github.com/ninaN1988/project
 
-cd /c/wamp/www/railway/project
+cd /c/wamp/www/project
 
 php -S localhost:3306 -t public/
 
