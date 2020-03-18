@@ -37,7 +37,7 @@
 		
 		$("#time_table_search").on("click", function(event){
 						$.ajax({  
-				url:	'http://localhost:3306/index.php/service/test',  
+				url:	'http://localhost/railway/public/index.php/service/test',  
 				type:	'POST',   
 				data: 	{ CityStart: document.getElementById('time_table_cityStart').value, CityEnd: document.getElementById('time_table_cityEnd').value },
 				dataType:	'json',  
