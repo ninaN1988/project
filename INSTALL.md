@@ -28,6 +28,8 @@ cd /c/wamp/www/railway/
 
 git clone https://github.com/ninaN1988/project
 
+cd /c/wamp/www/railway/project
+
 php -S localhost:3306 -t public/
 
 
