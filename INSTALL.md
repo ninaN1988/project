@@ -14,10 +14,12 @@ Installation:
 2.	Download Composer and install it globally on computer (https://getcomposer.org/download/)
 
 3.	Download project from repository and unzip to c:\wamp\www\Railway\
+(project rename to Railway in www folder)
  (c:\wamp\www\Railway\public\index.php)
  
-4. terminal
-- cd to folder where is composer.json
+4. in git terminal change directory to folder where is composer.json
+- cd /d/wamp/www/Railway
+instal composer using command
 - composer install
  
 5. Open in Browser http://localhost/railway/public/index.php
