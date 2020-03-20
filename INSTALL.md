@@ -16,7 +16,11 @@ Installation:
 3.	Download project from repository and unzip to c:\wamp\www\Railway\
  (c:\wamp\www\Railway\public\index.php)
  
-4. Open in Browser http://localhost/railway/public/index.php
+4. terminal
+- cd to folder where is composer.json
+- composer install
+ 
+5. Open in Browser http://localhost/railway/public/index.php
 
 
 
