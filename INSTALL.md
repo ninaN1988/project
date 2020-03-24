@@ -3,7 +3,7 @@ Installation:
 1. 	Download Wamp server 3.2.0. and install it ( http://www.wampserver.com/en/)
 
 - WampServer includes Apache 2.4.41, MySQL 5.7.28, MariaDB 10.4.10, PHP 7.3.13. and phpMyAdmin 4.9.2.
-- www directory in WampServer is automatically created (usually c:\wamp\www)
+- www directory in WampServer is automatically created (usually c:\wamp\www, but change to d:\wamp2\www)
 - run/start WampServer from Start menu
 
 2. 	Import Database
@@ -15,10 +15,10 @@ Installation:
 
 3.	Download project from repository and unzip to c:\wamp\www\Railway\
 (project rename to Railway in www folder)
- (c:\wamp\www\Railway\public\index.php)
+ (d:\wamp2\www\Railway\public\index.php)
  
 4. in git terminal change directory to folder where is composer.json
-- cd /d/wamp/www/Railway
+- cd /d/wamp2/www/Railway
 instal composer using command
 - composer install
  
